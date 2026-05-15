@@ -1,0 +1,87 @@
+:root {
+    --sky-blue: #87CEEB;
+    --deep-blue: #4682B4;
+    --grey-btn: #A9A9A9;
+    --white: #FFFFFF;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background-color: var(--sky-blue);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in;
+}
+
+.title-p1 {
+    color: var(--deep-blue);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+}
+
+.sub-p1 { color: #555; margin-bottom: 30px; }
+
+/* Button Halaman 1 */
+.btn-grey {
+    background-color: var(--grey-btn);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px; /* Tepi tidak tajam */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Card Halaman 2 */
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-left: 8px solid var(--deep-blue);
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+}
+
+.btn-blue {
+    background-color: var(--deep-blue);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.hidden { display: none !important; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+canvas {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
